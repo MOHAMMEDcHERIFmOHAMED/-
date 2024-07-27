@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>اذكار الصباح والمساء</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            color: rgb(0, 0, 0);
+            font-size: 25px;
+        }
+        body{
+            padding-top: 30px;
+            background-color: black;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            padding: 15px;
+            height: 90%;
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; 
+            overflow-y: auto;
+            background-color: rgba(250, 246, 169, 0.8407);
+        
+        }
+        .container::-webkit-scrollbar {
+            width: 10px;
+            background: rgba(255, 255, 255, 0); 
+            /* display: none; */ 
+        }
+        .content{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 25px;
+            border: solid 3px;
+            padding: 10px;
+            border-radius: 10px;
+        
+        }
+        .counter{
+            margin-top: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 0, 0.6907);
+            gap: 4px;
+
+            width: 140px;
+            height: 070px;
+        
+        }
+        .counter p{
+            margin-left: 30px;
+            font-size: 40px;
+        }
+        .counter button , .position{
+          position: relative;
+            border: none;
+            font-size: 35px;
+            background-color: transparent;
+            bottom: -15px;
+            right: -26px;
+        }
+        .position{
+            left: -100px;
+            font-size: 17px;
+        }
+        .counter,button:hover{
+            cursor: pointer;
+        }
+
+        .rtl {
+                direction: rtl;
+            }
+
+         .toggle-button {
+                    position: absolute;
+                    top: 10px;
+                    left: 10px;
+                    padding: 10px;
+                    border: none;
+                    background-color: rgba(255, 255, 255, 0.7);
+                    color: red;
+                    cursor: pointer;
+                    font-size: 18px;
+                    border-radius: 5px;
+        }
+        .section {
+                    display: none;
+        }
+        .section.active {
+                    display: block;
+        }
+        .toggle-button {
+            right: 10px; 
+        }
+
+           @media (min-width:950px) {
+            .container{
+            width: 50%;
+        }
+           }
+    </style>
+</head>
+<body>
+    <div class="container rtl">
+        <button class="toggle-button" style="color: red;" onclick="toggleSection()">اذكار المساء </button>
+        <div id="section1" class="section active">
+            <div class="content">
+                <!-- Your existing content here -->
+            </div>
+        </div>
+        <div id="section2" class="section">
+            <div class="content">
+                <!-- New content for Section 2 here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="thikr.js" ></script>
+</body>
+</html>
+
+
